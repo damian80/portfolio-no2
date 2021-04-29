@@ -7,7 +7,7 @@
 }
 html {
   font-family: 'Antonio', sans-serif;
-  font-family: 'Sacramento', cursive;
+  /* font-family: 'Sacramento', cursive; */
 }
 header {
   position: relative;
@@ -33,7 +33,7 @@ header.welcome {
   right: 5%; */
   text-align: center;
 }
-header h1 {
+header .name {
   font-family: 'Sacramento', cursive;
   font-size: 4rem;
   text-align: center;
@@ -65,8 +65,9 @@ header button:hover {
   border-radius: 50px;
 }
 section {
-  min-height: 100vh;
+  min-height: 30vh;
 }
+section.
 footer p {
   text-align: center;
   font-family: 'Antonio', sans-serif;
