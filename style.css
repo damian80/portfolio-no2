@@ -9,6 +9,12 @@ html {
   font-family: 'Antonio', sans-serif;
   /* font-family: 'Sacramento', cursive; */
 }
+.clearfix{
+  content: '';
+  display: block;
+  clear: both;
+
+}
 header {
   position: relative;
   height: 100vh;
@@ -82,6 +88,7 @@ h1.alone{
   text-transform: uppercase;
  text-align: center;
  padding-top:50px;
+ 
  line-height: 30px;
  height: 30px;
 }
@@ -111,9 +118,107 @@ footer p {
   font-family: 'Antonio', sans-serif;
 }
 .portfolio{
-  background-color: grey;
+ display: flex;
+ 
+ justify-content: center;
   max-width: 1280px;
-  margin:0 auto;
+  margin:20px auto;
+}
+.portfolio .about{
+  color: white;
+  font-weight: normal;
+  padding: 10px 20px 20px 20px;
+  text-align: left;
+}
+.portfolio .about h2{
+  font-size: 18px;
+  border-bottom: 2px solid #fff;
+  margin-bottom:12px;
+}
+.portfolio .about p{
+  font-size: 12px;
+}
+.portfolio .project:nth-of-type(odd){
+  background-color: orange;
+}
+.portfolio .project:nth-of-type(even){
+  background-color: lightblue;
+}
+.web .about{
+  width: 50%; 
+  float: left;
+}
+.slogan{
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  background:url('motto.jpg');
+  background-size:cover;
+  background-position: top center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 30px 10px;
+}
+.slogan h1{
+  font-size: 26px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.slogan p{
+  font-size: 18px;
+}
+.pictures .item{
+  min-height: 35vh;
+  width: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.pictures .item:nth-of-type(1){
+  background-image: url('outdoor.jpg');
+
+}
+.pictures .item:nth-of-type(2){
+  background-image: url('coding.jpg');
+
+}
+.pictures .item:nth-of-type(3){
+  background-image: url('books.jpg');
+
+}
+.pictures .item:nth-of-type(4){
+  background-image: url('food.jpg');
+
+}
+.pictures{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.pictures img{
+  width: 300px;
+  
+  /* max-width: 400px; */
+}
+.hobby .item p{
+  color:white;
+  padding: 0;
+  text-align: center;
+  line-height: 35vh;
+  text-shadow: 0 0 4px black;
+  background-color:rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: 1s;
+}
+.hobby .item:hover p {
+  opacity: 1;
+}
+.hobby .item{
+  background-size: 100%;
+  transition: 1s;
+}
+.hobby .item:hover{
+  background-size: 130%;
 }
 @media (orientation: portrait) and (min-width: 280px) {
     header img {
@@ -147,6 +252,16 @@ footer p {
       color: #29a6dc;
       background-color: #fff;
     }
+    .pictures{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .pictures img{
+      width: 100%;
+      margin:100px 0;
+      max-width: 375px;
+    }
 @media (orientation: portrait) and (min-width: 320px) {
     header img {
       width: 40%;
@@ -178,6 +293,25 @@ footer p {
     header button:hover {
       color: #29a6dc;
       background-color: #fff;
+    }
+    .portfolio{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+       max-width: 1280px;
+       margin:0 auto;
+       margin-bottom: 40px;
+     }
+     .slogan{
+      max-width: 1280px;
+      margin: 0 auto;
+      text-align: center;
+      background:url('motto.jpg');
+      background-size:cover;
+      background-position: top center;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 30px 10px;
     }
 @media (orientation: portrait) and (min-width: 360px) {
   header img {
@@ -346,5 +480,3 @@ footer p {
         }
   
     }
-  
- 
